@@ -31,13 +31,13 @@ ESP8266/ESP32
 - `user/repo/main/folder/file.json` - файл на GitHub по указанному пути в указанной ветке
 
 ```cpp
-AutoOTA(const char* cur_ver, const char* path, uint16_t port = 0);
+AutoOTA(const char* cur_ver, const char* url, uint16_t port = 0);
 
 // текущая версия
 const char* version();
 
 // проверить обновления. Можно передать строки для записи информации
-bool checkUpdate(String* version = nullptr, String* notes = nullptr);
+bool checkUpdate(String* version = nullptr, String* notes = nullptr, String* bin = nullptr);
 
 // есть обновление. Вызывать после проверки. Само сбросится в false
 bool hasUpdate();
